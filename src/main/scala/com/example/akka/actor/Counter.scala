@@ -21,9 +21,10 @@ class Counter extends Actor {
 
   override def receive: Receive = {
     case Increment(num) => count +=num
-      logger debug "Incremented count"
+      logger debug s"Incremented count to $count"
     case Decrement(num) => count -=num
-      logger debug "Decremented count"
-    case _ => logger warn "Counter: Unknown message!"
+      logger debug s"Decremented count to $count"
+    case _ =>
+      logger warn "Counter: Unknown message!"
   }
 }
