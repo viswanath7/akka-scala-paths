@@ -11,7 +11,7 @@ import scala.language.postfixOps
 /**
   * Unit test for Counter Actor
   */
-class CounterTest extends TestKit(ActorSystem("test-system")) with ImplicitSender
+class CounterSpec extends TestKit(ActorSystem("test-system")) with ImplicitSender
   with FlatSpecLike with  Matchers with BeforeAndAfterAll {
 
   override def afterAll: Unit = {
